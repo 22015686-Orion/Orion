@@ -7,11 +7,6 @@ import org.junit.BeforeClass;
 import org.junit.Test;
 
 public class CalculatorTest {
-	
-	int a = 10;
-	int b = 0;
-	boolean pass = true;
-	
 
 	@BeforeClass
 	public static void setUpBeforeClass() throws Exception {
@@ -24,16 +19,13 @@ public class CalculatorTest {
 
 	@Before
 	public void setUp() throws Exception {
-		if (b == 0) {
-			System.out.println("The doinominator is 0");
-			pass = false;
-		}
+
 	}
 
 	@After
 	public void tearDown() throws Exception {
 	}
-
+	
 	@Test
 	public void testAdd() {
 		// fail("Not yet implemented");
@@ -79,16 +71,14 @@ public class CalculatorTest {
 	@Test
 	public void testDivide() {
 		// fail("Not yet implemented");
+		int a = 10;
+		int b = 2;
 
-		if(pass = true) {
-		
 		Calculator cal = new Calculator();
 		int actual = cal.divide(a, b);
 
 		int expected = 5;
 		assertEquals(actual, expected);
-		}else {
-			System.out.println("cannot be divided");
-		}
+
 	}
 }
